@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
-This project uses React in the Frontend and Firebase as Backend service for Database and Storage of the images.
-
+This project uses React in the Frontend and Firebase as Backend service for Database and Storage of images.
+You can upload pictures through the form in this website and those will be saved in the Firebase storage.
 
 ## Available Scripts
 

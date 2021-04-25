@@ -1,11 +1,11 @@
 import Title from "./components/Title";
+import UploadForm from './components/UploadForm';
 
 function App() {
   return (
-    <div>
-      <header>
-      </header>
+    <div className='App'>
       <Title />
+      <UploadForm />
     </div>
   );
 }
