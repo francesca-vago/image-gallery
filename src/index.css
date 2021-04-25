@@ -28,3 +28,13 @@ body {
   letter-spacing: 2px;
   font-weight: normal;
 }
+
+.error {
+  color: var(--error);
+}
+
+.progress-bar {
+  height: 5px;
+  background-color: var(--primary);
+  margin-top: 20px;
+}
