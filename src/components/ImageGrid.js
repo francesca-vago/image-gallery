@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import useFirestore from '../hooks/useFirestore';
 import Modal from './Modal';
+import { motion } from 'framer-motion';
 
 export default function ImageGrid() {
     const [selectedImg, setSelectedImg] = useState(null);
@@ -10,13 +11,18 @@ export default function ImageGrid() {
         <>
             <div className='img-grid'>
                 { docs && docs.map(doc => (
-                    <div key={doc.id} className='img-card'>
-                        <img 
+                    <motion.div 
+                        key={doc.id} 
+                        className='img-card'
+                        layout
+                        whileHover={{ opacity: 1 }}
+                        onClick={() => setSelectedImg(doc.url)}
+                    >
+                        <motion.img 
                             src={doc.url} 
-                            alt="gallery" 
-                            onClick={() => setSelectedImg(doc.url)}
+                            alt="gallery"
                         />
-                    </div>
+                    </motion.div>
                 ))}
             </div>
             {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
